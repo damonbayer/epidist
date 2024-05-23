@@ -5,20 +5,20 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="A quick start guide to using the Epidist package">
-<title>Getting Started with Epidist • epidist</title>
+<meta name="description" content="A quick start guide to using the epidist R package">
+<title>Getting started with epidist • epidist</title>
 <script src="../deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="../deps/bootstrap-5.3.1/bootstrap.min.css" rel="stylesheet">
 <script src="../deps/bootstrap-5.3.1/bootstrap.bundle.min.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
-<!-- bootstrap-toc --><script src="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@v1.0.1/dist/bootstrap-toc.min.js" integrity="sha256-4veVQbu7//Lk5TSmc7YV48MxtMy98e26cf5MrgZYnwo=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.11/clipboard.min.js" integrity="sha512-7O5pXpc0oCRrxk8RUfDYFgn0nO1t+jLuIOQdOMRp4APB7uZ4vSjspzp5y6YDtDs4VzUSTbWzBFZ/LKJhnyFOKw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="Getting Started with Epidist">
-<meta property="og:description" content="A quick start guide to using the Epidist package">
+<!-- bootstrap-toc --><script src="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@v1.0.1/dist/bootstrap-toc.min.js" integrity="sha256-4veVQbu7//Lk5TSmc7YV48MxtMy98e26cf5MrgZYnwo=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.11/clipboard.min.js" integrity="sha512-7O5pXpc0oCRrxk8RUfDYFgn0nO1t+jLuIOQdOMRp4APB7uZ4vSjspzp5y6YDtDs4VzUSTbWzBFZ/LKJhnyFOKw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="Getting started with epidist">
+<meta property="og:description" content="A quick start guide to using the epidist R package">
 <meta property="og:image" content="https://epidist.epinowcast.org/logo.png">
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script>
 </head>
 <body>
     <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
-    <nav class="navbar fixed-top navbar-dark navbar-expand-lg bg-primary" data-bs-theme="dark" aria-label="Site navigation"><div class="container">
+    <nav class="navbar navbar-expand-lg fixed-top bg-light" data-bs-theme="light" aria-label="Site navigation"><div class="container">
     <a class="navbar-brand me-2" href="../index.html">epidist</a>
     <small class="nav-text text-danger me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Unreleased version">0.0.0.9000</small>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -39,152 +39,782 @@
 </nav><div class="container template-article">
 <div class="row">
   <main id="main" class="col-md-9"><div class="page-header">
-      <img src="../logo.png" class="logo" alt=""><h1>Getting Started with Epidist</h1>
-                        <h4 data-toc-skip class="author">Epidist Team</h4>
+      <img src="../logo.png" class="logo" alt=""><h1>Getting started with epidist</h1>
                         <div class="d-none name"><code>epidist.Rmd</code></div>
     </div>
-        <div class="section level2">
-<h2 id="quick-start">Quick start<a class="anchor" aria-label="anchor" href="#quick-start"></a>
-</h2>
-<p>In this quick start, we demonstrate using <code>epidist</code> to …</p>
-</div>
-<div class="section level2">
-<h2 id="package">Package<a class="anchor" aria-label="anchor" href="#package"></a>
-</h2>
-<p>In this quick start, we also use <code>data.table</code>, <code>purrr</code>, and <code>ggplot2</code> packages. These are both installed as dependencies when <code>epidist</code> is installed. Note that all output from <code>epidist</code> is readily useable with other tools, including <code>tidyverse</code> packages (see <a href="https://mgimond.github.io/rug_2019_12/Index.html" class="external-link">here</a> for a comparison).</p>
-<details class="chunk-details" open><summary class="chunk-summary"><span class="chunk-summary-text">Code</span></summary><div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+        <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://epidist.epinowcast.org/">epidist</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://r-datatable.com" class="external-link">data.table</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://purrr.tidyverse.org/" class="external-link">purrr</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org" class="external-link">ggplot2</a></span><span class="op">)</span></span></code></pre></div>
-</details><div class="section level4">
-<h4 id="simulate-the-data">Simulate the data<a class="anchor" aria-label="anchor" href="#simulate-the-data"></a>
-</h4>
-<p>Simulate data from an outbreak.</p>
-<details class="chunk-details" open><summary class="chunk-summary"><span class="chunk-summary-text">Code</span></summary><div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<p>Many quantities in epidemiology can be thought of as the time between two events, or “delays”.
+Important examples include:</p>
+<ul>
+<li>the incubation period (time between infection and symptom onset),</li>
+<li>serial interval (time between symptom onset of infectee and symptom onset of infected), and</li>
+<li>generation interval (time between infection of infectee and infection of infected).</li>
+</ul>
+<p>Unfortunately, estimating delays accurately from observational data is usually difficult.
+In our experience, the two main issues are:</p>
+<ol style="list-style-type: decimal">
+<li>interval censoring, and</li>
+<li>right truncation.</li>
+</ol>
+<p>Don’t worry if you’ve not come across these terms before.
+In Section <a href="#data">1</a>, we will explain what they mean by simulating data like that we might observe during an ongoing infectious disease outbreak.
+Next, in Section <a href="#fit">2</a>, we show how <code>epidist</code> can be used to estimate delays using a statistical model which properly accounts for these two issues.
+Finally, in Section <a href="#compare"><strong>??</strong></a>, we demonstrate that the fitted delay distribution accurately recovers the underlying truth.</p>
+<p>If you would like more technical details, the <code>epidist</code> package implements models following best practices as described in <span class="citation">Park et al. (<a href="#ref-park2024estimating">2024</a>)</span> and <span class="citation">Charniga et al. (<a href="#ref-charniga2024best">2024</a>)</span>.</p>
+<p>Finally, to run this vignette yourself, you will need the <code>data.table</code>, <code>purrr</code> and <code>ggplot2</code> packages installed.
+Note that to work with outputs from <code>epidist</code> you do not need to use <code>data.table</code>: any tool of your preference is suitable.</p>
+<div class="section level2" number="1">
+<h2 id="data">
+<span class="header-section-number">1</span> Example data<a class="anchor" aria-label="anchor" href="#data"></a>
+</h2>
+<p>Data should be formatted as a <a href="https://cran.r-project.org/web/packages/data.table/index.html" class="external-link"><code>data.table</code></a> with the following columns for use within <code>epidist</code>:</p>
+<ul>
+<li>
+<code>case</code>: The unique case ID.</li>
+<li>
+<code>ptime</code>: The time of the primary event.</li>
+<li>
+<code>stime</code>: The time of the secondary event.</li>
+</ul>
+<p>Here we simulate data in this format, and in doing so explain the two main issues with observational delay data.
+<!-- Please see as of yet unwritten vignette for information about how to transform your data of other formats to the right format. --></p>
+<p>First, we use the <a href="https://en.wikipedia.org/wiki/Gillespie_algorithm" class="external-link">Gillepsie algorithm</a> to generate infectious disease outbreak data (Figure <a href="#fig:outbreak">1.1</a>) from a stochastic compartmental model:</p>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">outbreak</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/simulate_gillespie.html">simulate_gillespie</a></span><span class="op">(</span>seed <span class="op">=</span> <span class="fl">101</span><span class="op">)</span></span></code></pre></div>
-</details><p>Define the secondary distribution to use in the simulation</p>
-<details class="chunk-details" open><summary class="chunk-summary"><span class="chunk-summary-text">Code</span></summary><div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">secondary_dist</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdatatable.gitlab.io/data.table/reference/data.table.html" class="external-link">data.table</a></span><span class="op">(</span></span>
-<span>  meanlog <span class="op">=</span> <span class="fl">1.8</span>, sdlog <span class="op">=</span> <span class="fl">0.5</span></span>
-<span><span class="op">)</span> <span class="op">|&gt;</span></span>
+
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">outbreak</span><span class="op">[</span><span class="va">case</span> <span class="op"><a href="https://rdrr.io/r/base/Arithmetic.html" class="external-link">%%</a></span> <span class="fl">50</span> <span class="op">==</span> <span class="fl">0</span>, <span class="op">]</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">ptime</span>, y <span class="op">=</span> <span class="va">case</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html" class="external-link">geom_point</a></span><span class="op">(</span>col <span class="op">=</span> <span class="st">"#56B4E9"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">labs</a></span><span class="op">(</span>x <span class="op">=</span> <span class="st">"Primary event time (day)"</span>, y <span class="op">=</span> <span class="st">"Case number"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html" class="external-link">theme_minimal</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<div class="figure">
+<span style="display:block;" id="fig:outbreak"></span>
+<img src="figures/epidist-outbreak-1.png" alt="Early on in the epidemic, there is a high rate of growth in new cases. As more people are infected, the rate of growth slows. (Only every 50th case is shown to avoid over-plotting.)" width="672"><p class="caption">
+Figure 1.1: Early on in the epidemic, there is a high rate of growth in new cases. As more people are infected, the rate of growth slows. (Only every 50th case is shown to avoid over-plotting.)
+</p>
+</div>
+<p><code>outbreak</code> is a <a href="https://cran.r-project.org/web/packages/data.table/index.html" class="external-link"><code>data.table</code></a> with the columns <code>case</code> and <code>ptime</code>.</p>
+<p>Now, to generate secondary events, we will use a lognormal distribution (Figure <a href="#fig:lognormal">1.2</a>) for the delay between primary and secondary events:</p>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">secondary_dist</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdatatable.gitlab.io/data.table/reference/data.table.html" class="external-link">data.table</a></span><span class="op">(</span>meanlog <span class="op">=</span> <span class="fl">1.8</span>, sdlog <span class="op">=</span> <span class="fl">0.5</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="../reference/add_natural_scale_mean_sd.html">add_natural_scale_mean_sd</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
-</details><p>Simulate an observation process during the growth phase for a secondary event using a lognormal distribution, and finally simulate observing this event.</p>
-<details class="chunk-details" open><summary class="chunk-summary"><span class="chunk-summary-text">Code</span></summary><div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span>x <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">30</span><span class="op">)</span><span class="op">)</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">x</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_function.html" class="external-link">geom_function</a></span><span class="op">(</span></span>
+<span>    fun <span class="op">=</span> <span class="va">dlnorm</span>,</span>
+<span>    args <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span></span>
+<span>      meanlog <span class="op">=</span> <span class="va">secondary_dist</span><span class="op">[[</span><span class="st">"meanlog"</span><span class="op">]</span><span class="op">]</span>,</span>
+<span>      sdlog <span class="op">=</span> <span class="va">secondary_dist</span><span class="op">[[</span><span class="st">"sdlog"</span><span class="op">]</span><span class="op">]</span></span>
+<span>    <span class="op">)</span></span>
+<span>  <span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html" class="external-link">theme_minimal</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">labs</a></span><span class="op">(</span></span>
+<span>    x <span class="op">=</span> <span class="st">"Delay between primary and secondary event (days)"</span>,</span>
+<span>    y <span class="op">=</span> <span class="st">"Probability density"</span></span>
+<span>  <span class="op">)</span></span></code></pre></div>
+<div class="figure">
+<span style="display:block;" id="fig:lognormal"></span>
+<img src="figures/epidist-lognormal-1.png" alt="The lognormal distribution is skewed to the right. Long delay times still have some probability." width="672"><p class="caption">
+Figure 1.2: The lognormal distribution is skewed to the right. Long delay times still have some probability.
+</p>
+</div>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">obs</span> <span class="op">&lt;-</span> <span class="va">outbreak</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="../reference/simulate_secondary.html">simulate_secondary</a></span><span class="op">(</span></span>
-<span>    meanlog <span class="op">=</span> <span class="va">secondary_dist</span><span class="op">$</span><span class="va">meanlog</span><span class="op">[[</span><span class="fl">1</span><span class="op">]</span><span class="op">]</span>,</span>
-<span>    sdlog <span class="op">=</span> <span class="va">secondary_dist</span><span class="op">$</span><span class="va">sdlog</span><span class="op">[[</span><span class="fl">1</span><span class="op">]</span><span class="op">]</span></span>
-<span>  <span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="../reference/observe_process.html">observe_process</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
-</details><p>Observe the outbreak after 25 days and take 100 samples.</p>
-<details class="chunk-details" open><summary class="chunk-summary"><span class="chunk-summary-text">Code</span></summary><div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">truncated_obs</span> <span class="op">&lt;-</span> <span class="va">obs</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="../reference/filter_obs_by_obs_time.html">filter_obs_by_obs_time</a></span><span class="op">(</span>obs_time <span class="op">=</span> <span class="fl">25</span><span class="op">)</span></span>
-<span><span class="va">truncated_obs</span> <span class="op">&lt;-</span> <span class="va">truncated_obs</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/sample.html" class="external-link">sample</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="va">.N</span>, <span class="fl">200</span>, replace <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span><span class="op">]</span></span></code></pre></div>
-</details><p>Plot primary cases (columns), and secondary cases (dots) by the observation time of their secondary events. This reflects would could be observed in real-time.</p>
-<details class="chunk-details" open><summary class="chunk-summary"><span class="chunk-summary-text">Code</span></summary><div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">truncated_cases</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/construct_cases_by_obs_window.html">construct_cases_by_obs_window</a></span><span class="op">(</span></span>
-<span>  <span class="va">obs</span>, windows <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">25</span><span class="op">)</span>, obs_type <span class="op">=</span> <span class="st">"stime"</span></span>
-<span><span class="op">)</span></span>
-<span></span>
-<span><span class="fu"><a href="../reference/plot_cases_by_obs_window.html">plot_cases_by_obs_window</a></span><span class="op">(</span><span class="va">truncated_cases</span><span class="op">)</span></span></code></pre></div>
-</details><p>We can alternatively plot the observed data based on primary events. This corresponds to a retrospective cohort based view of the data.</p>
-<details class="chunk-details" open><summary class="chunk-summary"><span class="chunk-summary-text">Code</span></summary><div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">truncated_cases</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/construct_cases_by_obs_window.html">construct_cases_by_obs_window</a></span><span class="op">(</span></span>
-<span>  <span class="va">obs</span>, windows <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">25</span><span class="op">)</span>, obs_type <span class="op">=</span> <span class="st">"ptime"</span></span>
-<span><span class="op">)</span></span>
-<span></span>
-<span><span class="fu"><a href="../reference/plot_cases_by_obs_window.html">plot_cases_by_obs_window</a></span><span class="op">(</span><span class="va">truncated_cases</span><span class="op">)</span></span></code></pre></div>
-</details><p>Plot the true continuous delay distribution and the empirical observed distribution for each observation window.</p>
-<details class="chunk-details" open><summary class="chunk-summary"><span class="chunk-summary-text">Code</span></summary><div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">combined_obs</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/combine_obs.html">combine_obs</a></span><span class="op">(</span><span class="va">truncated_obs</span>, <span class="va">obs</span><span class="op">)</span></span>
-<span></span>
-<span><span class="fu"><a href="../reference/plot_empirical_delay.html">plot_empirical_delay</a></span><span class="op">(</span></span>
-<span>  <span class="va">combined_obs</span>, meanlog <span class="op">=</span> <span class="va">secondary_dist</span><span class="op">$</span><span class="va">meanlog</span><span class="op">[[</span><span class="fl">1</span><span class="op">]</span><span class="op">]</span>,</span>
-<span>  sdlog <span class="op">=</span> <span class="va">secondary_dist</span><span class="op">$</span><span class="va">sdlog</span><span class="op">[[</span><span class="fl">1</span><span class="op">]</span><span class="op">]</span></span>
-<span><span class="op">)</span></span></code></pre></div>
-</details><p>Plot the mean difference between continuous and discrete event time:</p>
-<details class="chunk-details" open><summary class="chunk-summary"><span class="chunk-summary-text">Code</span></summary><div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">censor_delay</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/calculate_censor_delay.html">calculate_censor_delay</a></span><span class="op">(</span><span class="va">truncated_obs</span><span class="op">)</span></span>
-<span><span class="fu"><a href="../reference/plot_censor_delay.html">plot_censor_delay</a></span><span class="op">(</span><span class="va">censor_delay</span><span class="op">)</span></span></code></pre></div>
-</details>
-</div>
-<div class="section level4">
-<h4 id="model">Model<a class="anchor" aria-label="anchor" href="#model"></a>
-</h4>
-<p>Adjust for right truncation and date censoring using a latent variable approach.</p>
-<details class="chunk-details" open><summary class="chunk-summary"><span class="chunk-summary-text">Code</span></summary><div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">latent_truncation_censoring_fit</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/latent_truncation_censoring_adjusted_delay.html">latent_truncation_censoring_adjusted_delay</a></span><span class="op">(</span></span>
-<span>  data <span class="op">=</span> <span class="va">truncated_obs</span>, cores <span class="op">=</span> <span class="fl">4</span>, refresh <span class="op">=</span> <span class="fl">0</span></span>
-<span><span class="op">)</span></span></code></pre></div>
-</details>
-</div>
-<div class="section level4">
-<h4 id="summarise-model-posterior-and-compare-to-known-truth">Summarise model posterior and compare to known truth<a class="anchor" aria-label="anchor" href="#summarise-model-posterior-and-compare-to-known-truth"></a>
-</h4>
-<p>Combine models into a named list.</p>
-<details class="chunk-details" open><summary class="chunk-summary"><span class="chunk-summary-text">Code</span></summary><div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">models</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span></span>
-<span>  <span class="st">"Latent variable truncation and censoring adjusted"</span> <span class="op">=</span> <span class="va">latent_truncation_censoring_fit</span></span>
-<span><span class="op">)</span></span></code></pre></div>
-</details><p>Extract and summarise lognormal posterior estimates.</p>
-<details class="chunk-details" open><summary class="chunk-summary"><span class="chunk-summary-text">Code</span></summary><div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">draws</span> <span class="op">&lt;-</span> <span class="va">models</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://purrr.tidyverse.org/reference/map.html" class="external-link">map</a></span><span class="op">(</span><span class="va">extract_lognormal_draws</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://rdatatable.gitlab.io/data.table/reference/rbindlist.html" class="external-link">rbindlist</a></span><span class="op">(</span>idcol <span class="op">=</span> <span class="st">"model"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://rdrr.io/r/base/cbind.html" class="external-link">rbind</a></span><span class="op">(</span><span class="va">epinowcast_draws</span>, use.names <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
-<span></span>
-<span><span class="va">draws</span> <span class="op">&lt;-</span> <span class="va">draws</span><span class="op">[</span>,</span>
-<span>   <span class="va">model</span> <span class="op">:=</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html" class="external-link">factor</a></span><span class="op">(</span></span>
-<span>    <span class="va">model</span>, levels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Joint incidence and forward delay"</span>, <span class="fu"><a href="https://rdrr.io/r/base/rev.html" class="external-link">rev</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/names.html" class="external-link">names</a></span><span class="op">(</span><span class="va">models</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span>
-<span>   <span class="op">)</span><span class="op">]</span></span>
-<span></span>
-<span><span class="va">summarised_draws</span> <span class="op">&lt;-</span> <span class="va">draws</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="../reference/draws_to_long.html">draws_to_long</a></span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="../reference/summarise_draws.html">summarise_draws</a></span><span class="op">(</span>sf <span class="op">=</span> <span class="fl">3</span><span class="op">)</span></span>
-<span></span>
-<span><span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html" class="external-link">kable</a></span><span class="op">(</span><span class="va">summarised_draws</span><span class="op">[</span><span class="va">parameter</span> <span class="op"><a href="https://rdrr.io/r/base/match.html" class="external-link">%in%</a></span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"meanlog"</span>, <span class="st">"sdlog"</span><span class="op">)</span><span class="op">]</span><span class="op">)</span></span></code></pre></div>
-</details><p>Plot summarised posterior estimates from each model compared to the ground truth.</p>
-<details class="chunk-details" open><summary class="chunk-summary"><span class="chunk-summary-text">Code</span></summary><div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">draws</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="../reference/draws_to_long.html">draws_to_long</a></span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="../reference/make_relative_to_truth.html">make_relative_to_truth</a></span><span class="op">(</span><span class="fu"><a href="../reference/draws_to_long.html">draws_to_long</a></span><span class="op">(</span><span class="va">secondary_dist</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="../reference/plot_relative_recovery.html">plot_relative_recovery</a></span><span class="op">(</span>y <span class="op">=</span> <span class="va">model</span>, fill <span class="op">=</span> <span class="va">model</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/facet_wrap.html" class="external-link">facet_wrap</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/vars.html" class="external-link">vars</a></span><span class="op">(</span><span class="va">parameter</span><span class="op">)</span>, nrow <span class="op">=</span> <span class="fl">1</span>, scales <span class="op">=</span> <span class="st">"free_x"</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_brewer.html" class="external-link">scale_fill_brewer</a></span><span class="op">(</span>palette <span class="op">=</span> <span class="st">"Dark2"</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/guides.html" class="external-link">guides</a></span><span class="op">(</span>fill <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/guide_none.html" class="external-link">guide_none</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">labs</a></span><span class="op">(</span></span>
-<span>    y <span class="op">=</span> <span class="st">"Model"</span>, x <span class="op">=</span> <span class="st">"Relative to ground truth"</span></span>
+<span>    meanlog <span class="op">=</span> <span class="va">secondary_dist</span><span class="op">[[</span><span class="st">"meanlog"</span><span class="op">]</span><span class="op">]</span>,</span>
+<span>    sdlog <span class="op">=</span> <span class="va">secondary_dist</span><span class="op">[[</span><span class="st">"sdlog"</span><span class="op">]</span><span class="op">]</span></span>
 <span>  <span class="op">)</span></span></code></pre></div>
-</details><p>Finally, check the mean posterior predictions for each model against the observed daily cohort mean.</p>
-<details class="chunk-details" open><summary class="chunk-summary"><span class="chunk-summary-text">Code</span></summary><div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">truncated_draws</span> <span class="op">&lt;-</span> <span class="va">draws</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="../reference/calculate_truncated_means.html">calculate_truncated_means</a></span><span class="op">(</span></span>
-<span>    obs_at <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Extremes.html" class="external-link">max</a></span><span class="op">(</span><span class="va">truncated_obs</span><span class="op">$</span><span class="va">stime_daily</span><span class="op">)</span>,</span>
-<span>    ptime <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/range.html" class="external-link">range</a></span><span class="op">(</span><span class="va">truncated_obs</span><span class="op">$</span><span class="va">ptime_daily</span><span class="op">)</span></span>
-<span>  <span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="../reference/summarise_variable.html">summarise_variable</a></span><span class="op">(</span>variable <span class="op">=</span> <span class="st">"trunc_mean"</span>, by <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"obs_horizon"</span>, <span class="st">"model"</span><span class="op">)</span><span class="op">)</span> </span>
-<span></span>
-<span><span class="va">truncated_draws</span><span class="op">[</span>, <span class="va">model</span> <span class="op">:=</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html" class="external-link">factor</a></span><span class="op">(</span></span>
-<span>      <span class="va">model</span>, levels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Joint incidence and forward delay"</span>, <span class="fu"><a href="https://rdrr.io/r/base/rev.html" class="external-link">rev</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/names.html" class="external-link">names</a></span><span class="op">(</span><span class="va">models</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span>
-<span>    <span class="op">)</span><span class="op">]</span></span>
-<span></span>
-<span><span class="va">truncated_draws</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="../reference/plot_mean_posterior_pred.html">plot_mean_posterior_pred</a></span><span class="op">(</span></span>
-<span>    <span class="va">truncated_obs</span> <span class="op">|&gt;</span></span>
-<span>      <span class="fu"><a href="../reference/calculate_cohort_mean.html">calculate_cohort_mean</a></span><span class="op">(</span></span>
-<span>        type <span class="op">=</span> <span class="st">"cohort"</span>, obs_at <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Extremes.html" class="external-link">max</a></span><span class="op">(</span><span class="va">truncated_obs</span><span class="op">$</span><span class="va">stime_daily</span><span class="op">)</span></span>
-<span>      <span class="op">)</span>,</span>
-<span>    col <span class="op">=</span> <span class="va">model</span>, fill <span class="op">=</span> <span class="va">model</span>, mean <span class="op">=</span> <span class="cn">TRUE</span>, ribbon <span class="op">=</span> <span class="cn">TRUE</span></span>
+
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">obs</span><span class="op">[</span><span class="va">case</span> <span class="op"><a href="https://rdrr.io/r/base/Arithmetic.html" class="external-link">%%</a></span> <span class="fl">50</span> <span class="op">==</span> <span class="fl">0</span>, <span class="op">]</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>y <span class="op">=</span> <span class="va">case</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_segment.html" class="external-link">geom_segment</a></span><span class="op">(</span></span>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">ptime</span>, xend <span class="op">=</span> <span class="va">stime</span>, y <span class="op">=</span> <span class="va">case</span>, yend <span class="op">=</span> <span class="va">case</span><span class="op">)</span>,</span>
+<span>    col <span class="op">=</span> <span class="st">"grey"</span></span>
 <span>  <span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/guides.html" class="external-link">guides</a></span><span class="op">(</span></span>
-<span>    fill <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/guide_legend.html" class="external-link">guide_legend</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Model"</span>, nrow <span class="op">=</span> <span class="fl">4</span><span class="op">)</span>,</span>
-<span>    col <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/guide_legend.html" class="external-link">guide_legend</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Model"</span>, nrow <span class="op">=</span> <span class="fl">4</span><span class="op">)</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html" class="external-link">geom_point</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">ptime</span><span class="op">)</span>, col <span class="op">=</span> <span class="st">"#56B4E9"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html" class="external-link">geom_point</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">stime</span><span class="op">)</span>, col <span class="op">=</span> <span class="st">"#009E73"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">labs</a></span><span class="op">(</span>x <span class="op">=</span> <span class="st">"Event time (day)"</span>, y <span class="op">=</span> <span class="st">"Case number"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html" class="external-link">theme_minimal</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<div class="figure">
+<span style="display:block;" id="fig:delay"></span>
+<img src="figures/epidist-delay-1.png" alt="Secondary events (in green) occur with a delay drawn from the lognormal distribution (Figure 1.2). As with Figure 1.1, to make this figure easier to read, only every 50th case is shown." width="672"><p class="caption">
+Figure 1.3: Secondary events (in green) occur with a delay drawn from the lognormal distribution (Figure <a href="#fig:lognormal">1.2</a>). As with Figure <a href="#fig:outbreak">1.1</a>, to make this figure easier to read, only every 50th case is shown.
+</p>
+</div>
+<p><code>obs</code> is now a <a href="https://cran.r-project.org/web/packages/data.table/index.html" class="external-link"><code>data.table</code></a> object with further columns for <code>delay</code> and <code>stime</code>.
+The secondary event time is simply the primary event time plus the delay:</p>
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/all.html" class="external-link">all</a></span><span class="op">(</span><span class="va">obs</span><span class="op">$</span><span class="va">ptime</span> <span class="op">+</span> <span class="va">obs</span><span class="op">$</span><span class="va">delay</span> <span class="op">==</span> <span class="va">obs</span><span class="op">$</span><span class="va">stime</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] TRUE</span></span></code></pre></div>
+<p>If we were to receive the data <code>obs</code> as above then estimating the delay distribution would be easy, and the <code>epidist</code> package wouldn’t need to exist.
+However, in reality, during an outbreak we almost never receive the data as above.</p>
+<p>First, the times of primary and secondary events will usually be censored.
+This means that rather than exact event times, we observe event times within an interval.
+Here we suppose that the interval is daily, meaning that only the date of the primary or secondary event, not the exact event time, is reported (Figure <a href="#fig:cens">1.4</a>):</p>
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># observe_process() should be renamed and include a "daily" i.e. 1 argument</span></span>
+<span><span class="va">obs_cens</span> <span class="op">&lt;-</span> <span class="va">obs</span> <span class="op">|&gt;</span> <span class="fu"><a href="../reference/observe_process.html">observe_process</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="va">obs_cens</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">delay</span>, y <span class="op">=</span> <span class="va">delay_daily</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html" class="external-link">geom_point</a></span><span class="op">(</span>col <span class="op">=</span> <span class="st">"#E69F00"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_abline.html" class="external-link">geom_abline</a></span><span class="op">(</span>slope <span class="op">=</span> <span class="fl">1</span>, intercept <span class="op">=</span> <span class="fl">0</span>, linetype <span class="op">=</span> <span class="st">"dashed"</span>, col <span class="op">=</span> <span class="st">"grey"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html" class="external-link">theme_minimal</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/coord_fixed.html" class="external-link">coord_fixed</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">labs</a></span><span class="op">(</span>x <span class="op">=</span> <span class="st">"Exact delay time (days)"</span>, y <span class="op">=</span> <span class="st">"Censored delay time (days)"</span><span class="op">)</span></span></code></pre></div>
+<div class="figure">
+<span style="display:block;" id="fig:cens"></span>
+<img src="figures/epidist-cens-1.png" alt="Interval censoring of the primary and secondary event times obscures the delay times. While daily censoring is most common, epidist supports the primary and secondary events having other delay intervals." width="672"><p class="caption">
+Figure 1.4: Interval censoring of the primary and secondary event times obscures the delay times. While daily censoring is most common, <code>epidist</code> supports the primary and secondary events having other delay intervals.
+</p>
+</div>
+<p>Next, during an outbreak we will usually be estimating delays in real time.
+The result is that only those cases with a secondary event occurring before some time will be observed.
+This is called (right) truncation, and biases the observation process towards shorter delays:
+<!-- I think possible to do a better job with showing what right truncation is with a figure here! --></p>
+<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">obs_time</span> <span class="op">&lt;-</span> <span class="fl">25</span></span>
+<span><span class="co"># filter_obs_by_obs_time() should be renamed to refer to stime</span></span>
+<span><span class="va">obs_cens_trunc</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/filter_obs_by_obs_time.html">filter_obs_by_obs_time</a></span><span class="op">(</span><span class="va">obs_cens</span>, obs_time <span class="op">=</span> <span class="va">obs_time</span><span class="op">)</span></span></code></pre></div>
+<p>Finally, in reality, it’s not possible to observe every case.
+We suppose that a sample of individuals of size <code>sample_size</code> are observed:</p>
+<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">sample_size</span> <span class="op">&lt;-</span> <span class="fl">200</span></span></code></pre></div>
+<p>This sample size corresponds to 8.7% of the data.</p>
+<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">obs_cens_trunc_samp</span> <span class="op">&lt;-</span></span>
+<span>  <span class="va">obs_cens_trunc</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/sample.html" class="external-link">sample</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/seq.html" class="external-link">seq_len</a></span><span class="op">(</span><span class="va">.N</span><span class="op">)</span>, <span class="va">sample_size</span>, replace <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span><span class="op">]</span></span></code></pre></div>
+<p>Another issue, which <code>epidist</code> currently does not account for, is that sometimes only the secondary event might be observed, and not the primary event.
+For example, symptom onset may be reported, but start of infection unknown.
+Discarding events of this type leads to what are called ascertainment biases.
+Whereas each case is equally likely to appear in the sample above, under ascertainment bias some cases are more likely to appear in the data than others.</p>
+<p>With our censored, truncated, and sampled data, we are now ready to try to recover the underlying delay distribution using <code>epidist</code>.</p>
+</div>
+<div class="section level2" number="2">
+<h2 id="fit">
+<span class="header-section-number">2</span> Fit the model and compare estimates<a class="anchor" aria-label="anchor" href="#fit"></a>
+</h2>
+<p>If we had access to the data <code>obs</code>, then it would be simple to estimate the delay distribution.
+However, with only access to <code>obs_cens_trunc_samp</code>, the delay distribution we observe is biased (Figure <a href="#fig:obs-est">2.1</a>) and we must use a statistical model.</p>
+
+<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/bind_rows.html" class="external-link">bind_rows</a></span><span class="op">(</span></span>
+<span>  <span class="va">obs</span> <span class="op">|&gt;</span></span>
+<span>    <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html" class="external-link">mutate</a></span><span class="op">(</span>type <span class="op">=</span> <span class="st">"Full data"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>    <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html" class="external-link">select</a></span><span class="op">(</span><span class="va">delay</span>, <span class="va">type</span><span class="op">)</span>,</span>
+<span>  <span class="va">obs_cens_trunc</span> <span class="op">|&gt;</span></span>
+<span>    <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html" class="external-link">mutate</a></span><span class="op">(</span>type <span class="op">=</span> <span class="st">"Censored, truncated,\nsampled data"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>    <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html" class="external-link">select</a></span><span class="op">(</span><span class="va">delay</span>, <span class="va">type</span><span class="op">)</span></span>
+<span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_histogram.html" class="external-link">geom_histogram</a></span><span class="op">(</span></span>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">delay</span>, y <span class="op">=</span> <span class="va">..density..</span>, fill <span class="op">=</span> <span class="va">type</span>, group <span class="op">=</span> <span class="va">type</span><span class="op">)</span>,</span>
+<span>    position <span class="op">=</span> <span class="st">"dodge"</span></span>
 <span>  <span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_brewer.html" class="external-link">scale_fill_brewer</a></span><span class="op">(</span>palette <span class="op">=</span> <span class="st">"Dark2"</span>, aesthetics <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"fill"</span>, <span class="st">"colour"</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html" class="external-link">theme</a></span><span class="op">(</span>legend.direction <span class="op">=</span> <span class="st">"vertical"</span><span class="op">)</span></span></code></pre></div>
-</details>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_manual.html" class="external-link">scale_fill_manual</a></span><span class="op">(</span>values <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"#0072B2"</span>, <span class="st">"#D55E00"</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_function.html" class="external-link">geom_function</a></span><span class="op">(</span></span>
+<span>    data <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span>x <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">30</span><span class="op">)</span><span class="op">)</span>,</span>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">x</span><span class="op">)</span>,</span>
+<span>    fun <span class="op">=</span> <span class="va">dlnorm</span>,</span>
+<span>    args <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span></span>
+<span>      meanlog <span class="op">=</span> <span class="va">secondary_dist</span><span class="op">[[</span><span class="st">"meanlog"</span><span class="op">]</span><span class="op">]</span>,</span>
+<span>      sdlog <span class="op">=</span> <span class="va">secondary_dist</span><span class="op">[[</span><span class="st">"sdlog"</span><span class="op">]</span><span class="op">]</span></span>
+<span>    <span class="op">)</span>,</span>
+<span>  <span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">labs</a></span><span class="op">(</span></span>
+<span>    x <span class="op">=</span> <span class="st">"Delay between primary and secondary event (days)"</span>,</span>
+<span>    y <span class="op">=</span> <span class="st">"Probability density"</span>,</span>
+<span>    fill <span class="op">=</span> <span class="st">""</span></span>
+<span>  <span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html" class="external-link">theme_minimal</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html" class="external-link">theme</a></span><span class="op">(</span>legend.position <span class="op">=</span> <span class="st">"bottom"</span><span class="op">)</span></span></code></pre></div>
+<div class="figure">
+<span style="display:block;" id="fig:obs-est"></span>
+<img src="figures/epidist-obs-est-1.png" alt="The histogram of delays from obs matches closely the underlying distribution, whereas those from obs_cens_trunc_samp are systematically biased." width="672"><p class="caption">
+Figure 2.1: The histogram of delays from <code>obs</code> matches closely the underlying distribution, whereas those from <code>obs_cens_trunc_samp</code> are systematically biased.
+</p>
+</div>
+<p>The main <code>epidist</code> model function is <code>latent_truncation_censoring_adjusted_delay</code>.
+<!-- In a future vignette, we will explain in more detail the structure of the model. -->
+The parameters of the model are inferred using Bayesian inference.
+In particular, we use the the No-U-Turn Sampler (NUTS) Markov chain Monte Carlo (MCMC) algorithm via the <a href="https://paul-buerkner.github.io/brms/" class="external-link"><code>brms</code></a> R package <span class="citation">(<a href="#ref-brms">Bürkner 2017</a>)</span>.</p>
+<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">fit</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/latent_truncation_censoring_adjusted_delay.html">latent_truncation_censoring_adjusted_delay</a></span><span class="op">(</span></span>
+<span>  data <span class="op">=</span> <span class="va">obs_cens_trunc_samp</span>, cores <span class="op">=</span> <span class="fl">4</span>, refresh <span class="op">=</span> <span class="fl">0</span></span>
+<span><span class="op">)</span></span>
+<span><span class="co">#&gt; Running MCMC with 4 parallel chains...</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; Chain 2 finished in 5.3 seconds.</span></span>
+<span><span class="co">#&gt; Chain 1 finished in 5.6 seconds.</span></span>
+<span><span class="co">#&gt; Chain 3 finished in 5.5 seconds.</span></span>
+<span><span class="co">#&gt; Chain 4 finished in 5.6 seconds.</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; All 4 chains finished successfully.</span></span>
+<span><span class="co">#&gt; Mean chain execution time: 5.5 seconds.</span></span>
+<span><span class="co">#&gt; Total execution time: 5.8 seconds.</span></span></code></pre></div>
+<p>The <code>fit</code> object is a <code>brmsfit</code> object containing MCMC samples from each of the parameters (Table <a href="#tab:pars">2.1</a>) in the model.
+Users familiar with Stan and <code>brms</code>, can work with <code>fit</code> directly.
+Any tool that supports <code>brms</code> fitted model objects will be compatible with <code>fit</code>.</p>
+<div class="sourceCode" id="cb16"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">pars</span> <span class="op">&lt;-</span> <span class="va">fit</span><span class="op">$</span><span class="va">fit</span><span class="op">@</span><span class="va">par_dims</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://purrr.tidyverse.org/reference/map.html" class="external-link">map</a></span><span class="op">(</span>.f <span class="op">=</span> <span class="kw">function</span><span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="kw">if</span> <span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/identical.html" class="external-link">identical</a></span><span class="op">(</span><span class="va">x</span>, <span class="fu"><a href="https://rdrr.io/r/base/integer.html" class="external-link">integer</a></span><span class="op">(</span><span class="fl">0</span><span class="op">)</span><span class="op">)</span><span class="op">)</span> <span class="kw"><a href="https://rdrr.io/r/base/function.html" class="external-link">return</a></span><span class="op">(</span><span class="fl">1</span><span class="op">)</span> <span class="kw">else</span> <span class="kw"><a href="https://rdrr.io/r/base/function.html" class="external-link">return</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span><span class="st">"Parameter"</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/names.html" class="external-link">names</a></span><span class="op">(</span><span class="va">pars</span><span class="op">)</span>, <span class="st">"Length"</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/unlist.html" class="external-link">unlist</a></span><span class="op">(</span><span class="va">pars</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">gt</span><span class="fu">::</span><span class="fu"><a href="https://gt.rstudio.com/reference/gt.html" class="external-link">gt</a></span><span class="op">(</span>caption <span class="op">=</span></span>
+<span>      <span class="st">"All of the parameters that are included in the model.</span></span>
+<span><span class="st">      Many of these parameters are the so called latent variables in the model."</span></span>
+<span>  <span class="op">)</span></span></code></pre></div>
+<div id="dnujiogwtl" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#dnujiogwtl table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#dnujiogwtl thead, #dnujiogwtl tbody, #dnujiogwtl tfoot, #dnujiogwtl tr, #dnujiogwtl td, #dnujiogwtl th {
+  border-style: none;
+}
+
+#dnujiogwtl p {
+  margin: 0;
+  padding: 0;
+}
+
+#dnujiogwtl .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#dnujiogwtl .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#dnujiogwtl .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#dnujiogwtl .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#dnujiogwtl .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#dnujiogwtl .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#dnujiogwtl .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#dnujiogwtl .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#dnujiogwtl .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#dnujiogwtl .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#dnujiogwtl .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#dnujiogwtl .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#dnujiogwtl .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#dnujiogwtl .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#dnujiogwtl .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#dnujiogwtl .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#dnujiogwtl .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#dnujiogwtl .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#dnujiogwtl .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#dnujiogwtl .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#dnujiogwtl .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#dnujiogwtl .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#dnujiogwtl .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#dnujiogwtl .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#dnujiogwtl .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#dnujiogwtl .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#dnujiogwtl .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#dnujiogwtl .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#dnujiogwtl .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#dnujiogwtl .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#dnujiogwtl .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#dnujiogwtl .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#dnujiogwtl .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#dnujiogwtl .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#dnujiogwtl .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#dnujiogwtl .gt_left {
+  text-align: left;
+}
+
+#dnujiogwtl .gt_center {
+  text-align: center;
+}
+
+#dnujiogwtl .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#dnujiogwtl .gt_font_normal {
+  font-weight: normal;
+}
+
+#dnujiogwtl .gt_font_bold {
+  font-weight: bold;
+}
+
+#dnujiogwtl .gt_font_italic {
+  font-style: italic;
+}
+
+#dnujiogwtl .gt_super {
+  font-size: 65%;
+}
+
+#dnujiogwtl .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#dnujiogwtl .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#dnujiogwtl .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#dnujiogwtl .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#dnujiogwtl .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#dnujiogwtl .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#dnujiogwtl .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+<table class="table gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<caption>
+<span id="tab:pars">Table 2.1: </span>All of the parameters that are included in the model.
+      Many of these parameters are the so called latent variables in the model.</caption>
+  <thead><tr class="gt_col_headings">
+<th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="Parameter">Parameter</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Length">Length</th>
+    </tr></thead>
+<tbody class="gt_table_body">
+<tr>
+<td headers="Parameter" class="gt_row gt_left">Intercept</td>
+<td headers="Length" class="gt_row gt_right">1</td>
+</tr>
+<tr>
+<td headers="Parameter" class="gt_row gt_left">Intercept_sigma</td>
+<td headers="Length" class="gt_row gt_right">1</td>
+</tr>
+<tr>
+<td headers="Parameter" class="gt_row gt_left">swindow_raw</td>
+<td headers="Length" class="gt_row gt_right">200</td>
+</tr>
+<tr>
+<td headers="Parameter" class="gt_row gt_left">pwindow_raw</td>
+<td headers="Length" class="gt_row gt_right">200</td>
+</tr>
+<tr>
+<td headers="Parameter" class="gt_row gt_left">lprior</td>
+<td headers="Length" class="gt_row gt_right">1</td>
+</tr>
+<tr>
+<td headers="Parameter" class="gt_row gt_left">pwindow</td>
+<td headers="Length" class="gt_row gt_right">200</td>
+</tr>
+<tr>
+<td headers="Parameter" class="gt_row gt_left">swindow</td>
+<td headers="Length" class="gt_row gt_right">200</td>
+</tr>
+<tr>
+<td headers="Parameter" class="gt_row gt_left">b_Intercept</td>
+<td headers="Length" class="gt_row gt_right">1</td>
+</tr>
+<tr>
+<td headers="Parameter" class="gt_row gt_left">b_sigma_Intercept</td>
+<td headers="Length" class="gt_row gt_right">1</td>
+</tr>
+<tr>
+<td headers="Parameter" class="gt_row gt_left">lp__</td>
+<td headers="Length" class="gt_row gt_right">1</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>The <code>epidist</code> package also provides functions to make common post-processing tasks easy.
+For example, samples of the fitted lognormal <code>meanlog</code> and <code>sdlog</code> parameter can be extracted using:</p>
+<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">draws</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/extract_lognormal_draws.html">extract_lognormal_draws</a></span><span class="op">(</span><span class="va">fit</span><span class="op">)</span></span></code></pre></div>
+<p>Figure <a href="#fig:fitted-lognormal">2.2</a> shows…</p>
+
+<div class="sourceCode" id="cb18"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_function.html" class="external-link">geom_function</a></span><span class="op">(</span></span>
+<span>    data <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span>x <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">30</span><span class="op">)</span><span class="op">)</span>,</span>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">x</span><span class="op">)</span>,</span>
+<span>    fun <span class="op">=</span> <span class="va">dlnorm</span>,</span>
+<span>    args <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span></span>
+<span>      meanlog <span class="op">=</span> <span class="va">secondary_dist</span><span class="op">[[</span><span class="st">"meanlog"</span><span class="op">]</span><span class="op">]</span>,</span>
+<span>      sdlog <span class="op">=</span> <span class="va">secondary_dist</span><span class="op">[[</span><span class="st">"sdlog"</span><span class="op">]</span><span class="op">]</span></span>
+<span>    <span class="op">)</span>,</span>
+<span>  <span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_function.html" class="external-link">geom_function</a></span><span class="op">(</span></span>
+<span>    data <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span>x <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">30</span><span class="op">)</span><span class="op">)</span>,</span>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">x</span><span class="op">)</span>,</span>
+<span>    fun <span class="op">=</span> <span class="va">dlnorm</span>,</span>
+<span>    args <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span></span>
+<span>      meanlog <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html" class="external-link">mean</a></span><span class="op">(</span><span class="va">draws</span><span class="op">$</span><span class="va">meanlog</span><span class="op">)</span>,</span>
+<span>      sdlog <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html" class="external-link">mean</a></span><span class="op">(</span><span class="va">draws</span><span class="op">$</span><span class="va">sdlog</span><span class="op">)</span></span>
+<span>    <span class="op">)</span>,</span>
+<span>    col <span class="op">=</span> <span class="st">"#D55E00"</span></span>
+<span>  <span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">labs</a></span><span class="op">(</span></span>
+<span>    x <span class="op">=</span> <span class="st">"Delay between primary and secondary event (days)"</span>,</span>
+<span>    y <span class="op">=</span> <span class="st">"Probability density"</span></span>
+<span>  <span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html" class="external-link">theme_minimal</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<div class="figure">
+<span style="display:block;" id="fig:fitted-lognormal"></span>
+<img src="figures/epidist-fitted-lognormal-1.png" alt="Figure caption." width="672"><p class="caption">
+Figure 2.2: Figure caption.
+</p>
+</div>
+<div class="section level3">
+<h3 id="bibliography">Bibliography<a class="anchor" aria-label="anchor" href="#bibliography"></a>
+</h3>
+<div id="refs" class="references csl-bib-body hanging-indent" entry-spacing="0">
+<div id="ref-brms" class="csl-entry">
+Bürkner, Paul-Christian. 2017. <span>“<span class="nocase">brms</span>: An <span>R</span> Package for <span>Bayesian</span> Multilevel Models Using <span>Stan</span>.”</span> <em>Journal of Statistical Software</em> 80 (1): 1–28. <a href="https://doi.org/10.18637/jss.v080.i01" class="external-link">https://doi.org/10.18637/jss.v080.i01</a>.
+</div>
+<div id="ref-charniga2024best" class="csl-entry">
+Charniga, Kelly, Sang Woo Park, Andrei R Akhmetzhanov, Anne Cori, Jonathan Dushoff, Sebastian Funk, Katelyn M Gostic, et al. 2024. <span>“Best Practices for Estimating and Reporting Epidemiological Delay Distributions of Infectious Diseases Using Public Health Surveillance and Healthcare Data.”</span> <a href="https://arxiv.org/abs/2405.08841" class="external-link">https://arxiv.org/abs/2405.08841</a>.
+</div>
+<div id="ref-park2024estimating" class="csl-entry">
+Park, Sang Woo, Andrei R. Akhmetzhanov, Kelly Charniga, Anne Cori, Nicholas G. Davies, Jonathan Dushoff, Sebastian Funk, et al. 2024. <span>“Estimating Epidemiological Delay Distributions for Infectious Diseases.”</span> <em>medRxiv</em>. <a href="https://doi.org/10.1101/2024.01.12.24301247" class="external-link">https://doi.org/10.1101/2024.01.12.24301247</a>.
+</div>
+</div>
 </div>
 </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
