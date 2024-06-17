@@ -17,12 +17,19 @@
 </head>
 <body>
     <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
+
+
     <nav class="navbar navbar-expand-lg fixed-top bg-light" data-bs-theme="light" aria-label="Site navigation"><div class="container">
+
     <a class="navbar-brand me-2" href="../index.html">epidist</a>
+
     <small class="nav-text text-danger me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Unreleased version">0.0.0.9000</small>
+
+
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
+
     <div id="navbar" class="collapse navbar-collapse ms-3">
       <ul class="navbar-nav me-auto">
 <li class="nav-item"><a class="nav-link" href="../articles/epidist.html">Get started</a></li>
@@ -34,14 +41,24 @@
 </form></li>
       </ul>
 </div>
+
+
   </div>
 </nav><div class="container template-article">
+
+
 <div class="row">
   <main id="main" class="col-md-9"><div class="page-header">
       <img src="../logo.png" class="logo" alt=""><h1>Getting started with epidist</h1>
-                        <div class="d-none name"><code>epidist.Rmd</code></div>
+            
+      
+
+      <div class="d-none name"><code>epidist.Rmd</code></div>
     </div>
-        <p>Many quantities in epidemiology can be thought of as the time between two events or “delays”.
+
+    
+    
+<p>Many quantities in epidemiology can be thought of as the time between two events or “delays”.
 Important examples include:</p>
 <ul>
 <li>the incubation period (time between infection and symptom onset),</li>
@@ -258,14 +275,14 @@ In particular, we use the the No-U-Turn Sampler (NUTS) Markov chain Monte Carlo 
 <code class="sourceCode R"><span><span class="va">fit</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/epidist.html">epidist</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">data</span>, cores <span class="op">=</span> <span class="fl">4</span>, refresh <span class="op">=</span> <span class="fl">0</span><span class="op">)</span></span>
 <span><span class="co">#&gt; Running MCMC with 4 parallel chains...</span></span>
 <span><span class="co">#&gt; </span></span>
-<span><span class="co">#&gt; Chain 1 finished in 5.3 seconds.</span></span>
-<span><span class="co">#&gt; Chain 4 finished in 5.2 seconds.</span></span>
 <span><span class="co">#&gt; Chain 2 finished in 5.3 seconds.</span></span>
-<span><span class="co">#&gt; Chain 3 finished in 5.4 seconds.</span></span>
+<span><span class="co">#&gt; Chain 1 finished in 5.4 seconds.</span></span>
+<span><span class="co">#&gt; Chain 3 finished in 5.3 seconds.</span></span>
+<span><span class="co">#&gt; Chain 4 finished in 5.5 seconds.</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; All 4 chains finished successfully.</span></span>
-<span><span class="co">#&gt; Mean chain execution time: 5.3 seconds.</span></span>
-<span><span class="co">#&gt; Total execution time: 5.6 seconds.</span></span></code></pre></div>
+<span><span class="co">#&gt; Mean chain execution time: 5.4 seconds.</span></span>
+<span><span class="co">#&gt; Total execution time: 5.7 seconds.</span></span></code></pre></div>
 <p>The <code>fit</code> object is a <code>brmsfit</code> object containing MCMC samples from each of the parameters (Table <a href="#tab:pars">2.1</a>) in the model.
 Users familiar with Stan and <code>brms</code>, can work with <code>fit</code> directly.
 Any tool that supports <code>brms</code> fitted model objects will be compatible with <code>fit</code>.</p>
@@ -826,13 +843,23 @@ Park, Sang Woo, Andrei R. Akhmetzhanov, Kelly Charniga, Anne Cori, Nicholas G. D
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
     </nav></aside>
 </div>
+
+
+
     <footer><div class="pkgdown-footer-left">
   <p>Developed by Sang Woo Park, <a href="https://www.samabbott.co.uk/" class="external-link">Sam Abbott</a>, <a href="https://athowes.github.io/" class="external-link">Adam Howes</a>.</p>
 </div>
+
 <div class="pkgdown-footer-right">
   <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.9.9000.</p>
 </div>
+
     </footer>
 </div>
+
+
+
+
+
   </body>
 </html>
