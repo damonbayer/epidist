@@ -259,11 +259,11 @@ However, with only access to <code>obs_cens_trunc_samp</code>, the delay distrib
 Figure 2.1: The histogram of delays from the complete, retrospective data <code>obs_cens</code> match quite closely with the underlying distribution, whereas those from <code>obs_cens_trunc_samp</code> show more significant systematic bias. In this instance the extent of the bias caused by censoring is less than that caused by right truncation. Nonetheless, we always recommend [<span class="citation">Charniga et al. (<a href="#ref-charniga2024best">2024</a>)</span>; Table 2] adjusting for censoring when it is present.
 </p>
 </div>
-<p>The main function you will use for modelling is called <code>epidist</code><a class="footnote-ref" tabindex="0" data-bs-toggle="popover" data-bs-content='&lt;p&gt;Technically, &lt;code&gt;epidist&lt;/code&gt; is an &lt;a href="http://adv-r.had.co.nz/S3.html" class="external-link"&gt;S3 generic&lt;/a&gt; which allows it to work differently for inputs of different classes. This is why inputs must be prepared first via &lt;code&gt;epidist_prepare&lt;/code&gt; so that they are of the appropriate class!&lt;/p&gt;'><sup>2</sup></a>.
+<p>The main function you will use for modelling is called <code>epidist</code><a class="footnote-ref" tabindex="0" data-bs-toggle="popover" data-bs-content='&lt;p&gt;Technically, &lt;code&gt;epidist&lt;/code&gt; is an &lt;a href="http://adv-r.had.co.nz/S3.html" class="external-link"&gt;S3 generic&lt;/a&gt; which allows it to work differently for inputs of different classes. This is in part why inputs must be prepared first via &lt;code&gt;as_latent_individual&lt;/code&gt; so that they are of the appropriate class!&lt;/p&gt;'><sup>2</sup></a>.
 We will fit the model <code>"latent_individual"</code> which uses latent variables for the time of primary and secondary event of each individual<a class="footnote-ref" tabindex="0" data-bs-toggle="popover" data-bs-content="&lt;p&gt;In a future vignette, we will explain in more detail the structure of the model!&lt;/p&gt;"><sup>3</sup></a>.
-To do so, we first prepare the <code>data</code> using <code>epidist_prepare</code>:</p>
+To do so, we first prepare the <code>data</code> using <code>as_latent_individual</code>:</p>
 <div class="sourceCode" id="cb15"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/epidist_prepare.html">epidist_prepare</a></span><span class="op">(</span><span class="va">obs_cens_trunc_samp</span>, model <span class="op">=</span> <span class="st">"latent_individual"</span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/as_latent_individual.html">as_latent_individual</a></span><span class="op">(</span><span class="va">obs_cens_trunc_samp</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/class.html" class="external-link">class</a></span><span class="op">(</span><span class="va">data</span><span class="op">)</span></span>
 <span><span class="co">#&gt; [1] "data.table"                "data.frame"               </span></span>
 <span><span class="co">#&gt; [3] "epidist_latent_individual"</span></span></code></pre></div>
@@ -276,8 +276,8 @@ In particular, we use the the No-U-Turn Sampler (NUTS) Markov chain Monte Carlo 
 <span><span class="co">#&gt; Running MCMC with 4 parallel chains...</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; Chain 1 finished in 5.4 seconds.</span></span>
-<span><span class="co">#&gt; Chain 2 finished in 5.5 seconds.</span></span>
-<span><span class="co">#&gt; Chain 3 finished in 5.4 seconds.</span></span>
+<span><span class="co">#&gt; Chain 2 finished in 5.4 seconds.</span></span>
+<span><span class="co">#&gt; Chain 3 finished in 5.5 seconds.</span></span>
 <span><span class="co">#&gt; Chain 4 finished in 5.5 seconds.</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; All 4 chains finished successfully.</span></span>
